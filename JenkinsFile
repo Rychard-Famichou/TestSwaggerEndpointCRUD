@@ -13,17 +13,17 @@ pipeline {
         }
         stage('pet'){
             steps{
-                sh 'python TestSwaggerPetCRUD.py'
+                sh 'python3 TestSwaggerPetCRUD.py'
             }
         }
         stage('store'){
             steps{
-                sh 'python TestSwaggerStoreCRUD.py'
+                sh 'python3 TestSwaggerStoreCRUD.py'
             }
         }
         stage('user'){
             steps{
-                sh 'python TestSwaggerUserCRUD.py'
+                sh 'python3 TestSwaggerUserCRUD.py'
             }
         }
     }
