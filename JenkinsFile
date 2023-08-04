@@ -1,6 +1,11 @@
 pipeline {
     agent any
     stages{
+        stage('version'){
+            steps{
+                sh 'python --version'
+            }
+        }
         stage('pet'){
             steps{
                 sh 'python TestSwaggerPetCRUD.py'
