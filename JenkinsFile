@@ -3,17 +3,17 @@ pipeline {
     stages{
         stage('pet'){
             steps{
-                sh 'python3 TestSwaggerPetCRUD.py'
+                sh 'python TestSwaggerPetCRUD.py'
             }
         }
         stage('store'){
             steps{
-                sh 'python3 TestSwaggerStoreCRUD.py'
+                sh 'python TestSwaggerStoreCRUD.py'
             }
         }
         stage('user'){
             steps{
-                sh 'python3 TestSwaggerUserCRUD.py'
+                sh 'python TestSwaggerUserCRUD.py'
             }
         }
     }
