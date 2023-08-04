@@ -1,0 +1,20 @@
+pipeline {
+    agent any
+    stages{
+        stage('pet'){
+            steps{
+                sh 'python3 TestSwaggerPetCRUD.py'
+            }
+        }
+        stage('store'){
+            steps{
+                sh 'python3 TestSwaggerStoreCRUD.py'
+            }
+        }
+        stage('user'){
+            steps{
+                sh 'python3 TestSwaggerUserCRUD.py'
+            }
+        }
+    }
+}
