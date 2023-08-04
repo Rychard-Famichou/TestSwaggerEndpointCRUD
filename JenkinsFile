@@ -6,23 +6,21 @@ pipeline {
                 checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/Rychard-Famichou/TestSwaggerEndpointCRUD.git']])
             }
         }
-        stage('version'){
-            steps{
-                sh 'python --version'
-            }
-        }
         stage('pet'){
             steps{
+                git branch: 'main', url: 'https://github.com/Rychard-Famichou/TestSwaggerEndpointCRUD.git'
                 sh 'python3 TestSwaggerPetCRUD.py'
             }
         }
         stage('store'){
             steps{
+                git branch: 'main', url: 'https://github.com/Rychard-Famichou/TestSwaggerEndpointCRUD.git'
                 sh 'python3 TestSwaggerStoreCRUD.py'
             }
         }
         stage('user'){
             steps{
+                git branch: 'main', url: 'https://github.com/Rychard-Famichou/TestSwaggerEndpointCRUD.git'
                 sh 'python3 TestSwaggerUserCRUD.py'
             }
         }
